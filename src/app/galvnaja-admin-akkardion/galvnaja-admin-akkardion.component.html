@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="accordion" class="panel-group">
+        <div class="panel panel-default">
+          <a class="zagolovok_podmenu btn btn-success btn-lg btn-block" href="#collapse_1" data-toggle="collapse">Администрирование</a>
+          <div class="panel-collapse collapse" id="collapse_1">
+            <div class="panel-body">
+              <a *ngFor = "let value of podmenuAkkordionAdmin" class="btn btn-default btn-block" [routerLink]="'/' + [value.link]" (click)="saveLink(value.name)">{{value.name}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <a class="zagolovok_podmenu btn btn-success btn-lg btn-block" href="#collapse_2" data-toggle="collapse">Наполнение контентом</a>
+          <div class="panel-collapse collapse" id="collapse_2">
+            <div class="panel-body">
+              <a *ngFor = "let value of podmenuAkkordionNapolnenie" class="btn btn-default btn-block" [routerLink]="'/' + [value.link]">{{value.name}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <a class="zagolovok_podmenu btn btn-success btn-lg btn-block" href="#collapse_3" data-toggle="collapse">Просмотр контента</a>
+          <div class="panel-collapse collapse" id="collapse_3">
+            <div class="panel-body">
+              <a *ngFor = "let value of podmenuAkkordionProsmotr" class="btn btn-default btn-block" [routerLink]="'/' + [value.link]">{{value.name}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <a class="zagolovok_podmenu btn btn-success btn-lg btn-block" href="#collapse_4" data-toggle="collapse">Улучшение приложения</a>
+          <div class="panel-collapse collapse" id="collapse_4">
+            <div class="panel-body">
+              <a *ngFor = "let value of podmenuAkkordionYlychshenie" class="btn btn-default btn-block" [routerLink]="'/' + [value.link]">{{value.name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+  </div>
+</div>

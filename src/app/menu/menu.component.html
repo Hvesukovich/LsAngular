@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div>
+          <button type="button" class="navbar-toggle" data-toggle ="collapse" data-target="#responsive-menu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="responsive-menu">
+          <ul class="nav navbar-nav">
+            <li *ngFor = "let value of arrMenu"><a href="#">{{value}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

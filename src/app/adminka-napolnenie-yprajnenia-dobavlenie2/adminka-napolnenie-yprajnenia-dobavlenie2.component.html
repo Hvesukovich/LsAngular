@@ -1,0 +1,243 @@
+<!--Наполнение-->
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <form action="" class="">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Добавление упражнения</option>
+            <option>Редактирование упражнения</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Введите название">
+        </div>
+        <!--Тип упражнения-->
+        <div class="form-group">
+          <label class="form-control name_podmenu">Тип упражнения</label>
+          <div class="form-group">
+            <select class="form-control">
+              <option>Выберите тип упражнения</option>
+              <option>Разминка</option>
+              <option>Растяжка</option>
+              <option>Силовое упражнение</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
+            </div>
+            <div class="col-xs-6">
+              <button class="btn btn-success btn-block disabled">Отменить</button>
+            </div>
+          </div>
+        </div>
+        <!--Конец типа упражнения-->
+
+        <!--Количество полей-->
+        <div class="form-group">
+          <label class="form-control name_podmenu">Количество полей</label>
+          <div class="row">
+            <div class="col-xs-9">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <label for="number_pola_vvoda_kolich_v_pjdhode">Поля для ввода количества в подходе:</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="row">
+                <div class="col-xs-11">
+                  <input id="number_pola_vvoda_kolich_v_pjdhode" type="number" class="form-control dlina_number" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Конец количества полей-->
+        <!--*****************Нагрузка на группу мышц**********************-->
+        <div class="form-group panel panel-success">
+          <label class="form-control name_podmenu">Нагрузка на группу мышц</label>
+          <div class="container">
+            <!--Основная нагрузка-->
+            <div class="form-group">
+              <label class="form-control name_podmenu">Основная нагрузка</label>
+
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Выберите группу мышц</option>
+                  <option>Бицепс</option>
+                  <option>Трицепс</option>
+                  <option>Грудные</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
+                </div>
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block disabled">Отменить</button>
+                </div>
+              </div>
+            </div>
+            <!--Конец основной нагрузки-->
+            <!--Вспомогательная нагрузка-->
+            <div class="form-group">
+              <label class="form-control name_podmenu">Встпомогательная</label>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Выберите группу мышц</option>
+                  <option>Бицепс</option>
+                  <option>Трицепс</option>
+                  <option>Грудные</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
+                </div>
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block disabled">Отменить</button>
+                </div>
+              </div>
+            </div>
+            <!--Конец вспомогательной нагрузки-->
+            <!--ДОПОЛНИТЕЛЬНО для нагрузки-->
+            <div class="form-group">
+              <label class="form-control name_podmenu">ДОПОЛНИТЕЛЬНО</label>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Выберите группу мышц</option>
+                  <option>Бицепс</option>
+                  <option>Трицепс</option>
+                  <option>Грудные</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Выберите нагрузку</option>
+                  <option></option>
+                  <option>Основная</option>
+                  <option>Вспомогательная</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
+                </div>
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block disabled">Отменить</button>
+                </div>
+              </div>
+            </div>
+            <!--Конец ДОПОЛНИТЕЛЬНО для нагрузки-->
+            <!--Акцент на пучок мышцы-->
+            <div class="form-group">
+              <label class="form-control name_podmenu">Акцент на пучок мышцы</label>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Выберите мышцы</option>
+                  <option>Длинная головка бицепса</option>
+                  <option>Короткая головка бицепса</option>
+                  <option>Длинная головка трицепса</option>
+                  <option>Латеральная головка трицепса</option>
+                  <option>Медиальная головка трицепса</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
+                </div>
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block disabled">Отменить</button>
+                </div>
+              </div>
+            </div>
+            <!--Конец акцента на пучок мышцы-->
+            <!--Снаярды для упражнения-->
+            <div class="form-group">
+              <label class="form-control name_podmenu">Снаряды для упражнеия</label>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Выберите снаряд</option>
+                  <option>Скамья скотта</option>
+                  <option>Тренажёр Смитта</option>
+                  <option>Гантели</option>
+                  <option>Штанга</option>
+                  <option>Блок</option>
+                  <option>Кроссовер</option>
+                  <option>Перекладина</option>
+                  <option>Скамья горизонтальная</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
+                </div>
+                <div class="col-xs-6">
+                  <button class="btn btn-success btn-block disabled">Отменить</button>
+                </div>
+              </div>
+            </div>
+            <!--Конец снарядов для упражнения-->
+          </div>
+        </div>
+        <!--Конец нагрузки на группу мышц-->
+
+        <!--**************************************Слайдер***********************************-->
+        <br>
+
+        <div class="container panel panel-success nadpis_label_center">
+          <label class="">Работа с изображением</label>
+          <div class="carousel slide panel-success form-group" id="carousel">
+            <ol class="carousel-indicators">
+              <li class="active" data-target="#carousel" data-slide-to="0"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="center-block" src="img/eb79d0da19ea3a57802eda82844c7d56.jpg" alt="">
+                <div class="carousel-caption">
+
+                </div>
+              </div>
+              <div class="item">
+                <img class="center-block" src="img/Aston Martin Zagato Volante_1.jpg" alt="">
+                <!-- class="carousel-caption" - Помещает индикаторы и содержание данного блока в цетре снизу -->
+                <div class="carousel-caption">
+
+                </div>
+              </div>
+            </div>
+
+            <a href="#carousel" class="left carousel-control" data-slide = "prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel" class="right carousel-control" data-slide = "next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-block btn-default">Добавить/изменить изображение</button>
+          </div>
+        </div>
+        <div class="container panel panel-success form-group nadpis_label_center">
+          <label class="">Функции и пояснения:</label>
+          <textarea class="form-control form-group" rows="5"></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <button class="btn btn-success btn-block">Сохранить</button>
+          </div>
+          <div class="col-xs-6">
+            <button class="btn btn-success btn-block">Отменить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--Конец наполнения-->

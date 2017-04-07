@@ -1,0 +1,113 @@
+<!--Наполнение-->
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <form action="" class="">
+        <div class="form-group">
+
+          <select class="form-control">
+            <option>Редактирование части тела</option>
+            <option>Добавление части тела</option>
+          </select>
+        </div>
+        <div class="form-group">
+
+          <select class="form-control">
+            <option>Выберите часть тела</option>
+            <option>Шея</option>
+            <option>Плечи</option>
+            <option>Спина</option>
+            <option>Руки</option>
+            <option>Ноги</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Введите название">
+        </div>
+        <div class="row">
+          <div class="col-xs-9">
+            <label for="number_vvod_chasti_tela" class="form-control">Порядковый номер: </label>
+          </div>
+          <div class="col-xs-3 navbar-right">
+            <input id="number_vvod_chasti_tela" type="number" class="form-control dlina_number" />
+          </div>
+        </div>
+
+        <!--**************************************Слайдер***********************************-->
+        <br>
+
+        <div class="container panel panel-success nadpis_label_center">
+          <label class="">Работа с изображением</label>
+          <!-- class="carousel" - ???????????????????????????????????? -->
+          <!-- class="slide" - ???????????????????????????????????? -->
+          <div class="carousel slide panel-success form-group" id="carousel">
+            <!--Индикаторы слайдов-->
+            <!-- class="carousel-indicators" - применяет стили для номеров слайда (вид кружочков снизу по середине слайдов,
+            без стиля цифры НАД слайдами) -->
+            <ol class="carousel-indicators">
+              <!-- class="active" - данный класс делает индикатор активным, т.е. именно этот слайд будет отображаться -->
+              <!-- data-target="#carousel" - указываю "#" + "id" блока в котором находиться слайдер -->
+              <!-- data-slide-to="0" - указывается для кликабельности индикаторов (кружочков).
+              В кавычках указывается номер слайда. Нумерация начинается с нуля. -->
+              <li class="active" data-target="#carousel" data-slide-to="0"></li>
+            </ol>
+            <!--Слайды-->
+            <!-- class="carousel-inner" - задаёт относительное позиционирование блоку, так же определяет для него ширину в 100%
+             и скрывает находящиеся внути блоки (чтоб слайдер не отобразился на странице ввиде кучи картинок идущих одна под одной)-->
+            <div class="carousel-inner">
+              <!-- class="item" - ????????????????????????????????????????????????????? -->
+              <!-- class="active" - активирует данный блок (слайд) -->
+              <div class="item active">
+                <img class="center-block" src="img/8943504083538ce5df23c8eff97a15f4.jpg" alt="">
+                <!-- class="carousel-caption" - Помещает индикаторы и содержание данного блока в цетре снизу -->
+                <div class="carousel-caption">
+
+                </div>
+              </div>
+            </div>
+
+            <!--Стрелки переключения слайдов-->
+            <!-- href="#carousel" -  указываю "#" + "id" блока в котором находиться слайдер -->
+            <!-- class="left" - задаёт стиль для отображения стрелочки в виде затемнения при наведении курсором -->
+            <!-- class="carousel-control" -  Задаёт абсолютное позиционирование для переключателя стрелочки,
+            чтоб она отображалась перед слайдом в определённом месте -->
+            <!-- data-slide = "prev" -  указываю в куда переключать слайды. В данном случае назад -->
+            <a href="#carousel" class="left carousel-control" data-slide = "prev">
+              <!-- class="glyphicon">  - отображает стрелочку для листания -->
+              <!-- class="glyphicon-chevron-left">  - задаёт абсолютное позиционирование для отображения стрелочки
+              (без glyphicon отображает простой прямоугольник, как бы место для стрелочки).
+              Так же указывает в какую сторону будет повёрнута стрелочка. В данном случае влево.  -->
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel" class="right carousel-control" data-slide = "next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-block btn-default">Добавить/изменить изображение</button>
+          </div>
+        </div>
+        <div class="container panel panel-success form-group nadpis_label_center">
+          <label class="">Функции и пояснения:</label>
+          <textarea class="form-control form-group" rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-block btn-success">Сохранить изменения</button>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <button class="btn btn-success btn-block">Отменить</button>
+          </div>
+          <div class="col-xs-6">
+            <button class="btn btn-success btn-block">Удалить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--Конец наполнения-->

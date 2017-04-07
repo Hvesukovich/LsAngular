@@ -1,0 +1,87 @@
+<!--Наполнение-->
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <form action="" class="">
+        <div class="form-group">
+
+          <select class="form-control">
+            <option>Редактирование снарядов</option>
+            <option>Добавление снарядов</option>
+          </select>
+        </div>
+        <div class="form-group">
+
+          <select class="form-control">
+            <option>Выбор снаряда (скамья скотта)</option>
+            <option>Скамья скотта</option>
+            <option>Штанга</option>
+            <option>Скамья горизонтальная</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Введите название">
+        </div>
+        <div class="row">
+          <div class="col-xs-9">
+            <label for="number_vvod_chasti_tela" class="form-control">Порядковый номер: </label>
+          </div>
+          <div class="col-xs-3 navbar-right">
+            <input id="number_vvod_chasti_tela" type="number" class="form-control dlina_number" />
+          </div>
+        </div>
+
+        <!--**************************************Слайдер***********************************-->
+        <br>
+
+        <div class="container panel panel-success nadpis_label_center">
+          <label class="">Работа с изображением</label>
+          <div class="carousel slide panel-success form-group" id="carousel">
+            <ol class="carousel-indicators">
+              <li class="active" data-target="#carousel" data-slide-to="0"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="center-block" src="img/1410895.jpeg" alt="">
+                <!-- class="carousel-caption" - Помещает индикаторы и содержание данного блока в цетре снизу -->
+                <div class="carousel-caption">
+
+                </div>
+              </div>
+            </div>
+
+            <a href="#carousel" class="left carousel-control" data-slide = "prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel" class="right carousel-control" data-slide = "next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-block btn-default">Добавить/изменить изображение</button>
+          </div>
+        </div>
+        <div class="container panel panel-success form-group nadpis_label_center">
+          <label class="">Функции и пояснения:</label>
+          <textarea class="form-control form-group" rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-block btn-success">Сохранить изменения</button>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <button class="btn btn-success btn-block">Отменить</button>
+          </div>
+          <div class="col-xs-6">
+            <button class="btn btn-success btn-block">Удалить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--Конец наполнения-->

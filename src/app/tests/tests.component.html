@@ -1,0 +1,34 @@
+<!--Добавление блоков-->
+<div class="container">
+    <div class="form-group">
+        <label class="form-control name_podmenu">ОПЫТЫ</label>
+        <!--<div>-->
+        <div class="form-group" *ngFor="let value of rows(); let i = index">
+            <div class="form-group">
+                <select class="form-control" [(ngModel)]="selectedArr[i]">
+                  <option></option>
+                  <option *ngFor="let value of possibleSelect(selectedArr[i])">{{value}}</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" *ngIf="btn_dobavlenie == tip_ypr.length">
+                    <button class="btn btn-success btn-block otstup_ot_knopki" (click)="btn_dobavlenie_dec()" >Добавить</button>
+                </div>
+
+                <div class="col-xs-6" *ngIf="btn_dobavlenie > 0 && btn_dobavlenie < tip_ypr.length">
+                    <button class="btn btn-success btn-block otstup_ot_knopki" (click)="btn_dobavlenie_dec()" >Добавить</button>
+                </div>
+                <div class="col-xs-6" *ngIf="btn_dobavlenie > 0 && btn_dobavlenie < tip_ypr.length">
+                    <button class="btn btn-success btn-block" (click)="btn_dobavlenie_inc()">Отменить</button>
+                </div>
+
+                <div class="col-xs-12" *ngIf="btn_dobavlenie == 0">
+                    <button class="btn btn-success btn-block" (click)="btn_dobavlenie_inc()">Отменить</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--Конец добавления блоков-->
