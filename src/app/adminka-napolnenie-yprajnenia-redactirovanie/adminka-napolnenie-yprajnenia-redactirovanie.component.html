@@ -4,58 +4,50 @@
     <div class="container">
       <form action="" class="">
         <div class="form-group">
-          <select class="form-control">
-            <option>Редактирование упражнения</option>
+          <select class="form-control" [(ngModel)]="selected_vibor" [ngModelOptions]="{standalone: true}" (click)="clear_info()">
             <option>Добавление упражнения</option>
+            <option>Редактировать упражнение</option>
           </select>
         </div>
-        <div class="form-group">
-          <select class="form-control" [(ngModel)]="groupMuscles" [ngModelOptions]="{standalone: true}">
-              <option [ngValue]="value.nameListExercises" *ngFor="let value of nameListGroupMuscles">{{value.name_group_muscles}}</option>
-          </select>
+        <div *ngIf="selected_vibor == 'Редактировать упражнение'">
+            <div class="form-group">
+                <select class="form-control" [(ngModel)]="groupMuscles" [ngModelOptions]="{standalone: true}">
+                    <option [ngValue]="value.nameListExercises" *ngFor="let value of nameListGroupMuscles">{{value.name_group_muscles}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" [(ngModel)]="nameExercises" [ngModelOptions]="{standalone: true}">
+                    <option [ngValue]="value" *ngFor="let value of groupMuscles">{{value}}</option>
+                </select>
+            </div>
         </div>
+
         <div class="form-group">
-          <select class="form-control" [(ngModel)]="nameExercises" [ngModelOptions]="{standalone: true}">
-            <option [ngValue]="value" *ngFor="let value of groupMuscles">{{value}}</option>
-          </select>
+          <input class="form-control" type="text" placeholder="Введите название" value="{{nameExercises}}">
         </div>
-        <div class="form-group">
-          <input class="form-control" type="text" [(ngModel)]="nameExercises" [ngModelOptions]="{standalone: true}" placeholder="Введите название">
-        </div>
+
         <!--Тип упражнения-->
         <div class="form-group">
-          <label class="form-control name_podmenu">Тип упражнения</label>
-          <div class="form-group">
-            <select class="form-control">
-              <option>Силовое упражнение</option>
-              <option>Разминка</option>
-              <option>Растяжка</option>
-            </select>
-          </div>
-          <div class="row">
-            <div class="col-xs-6">
-              <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
+            <label class="form-control name_podmenu">Тип упражнения</label>
+            <div class="form-group" *ngFor="let value of selectedArr; let i = index">
+                <div class="form-group">
+                    <select class="form-control" [(ngModel)]="selectedArr[i]" [ngModelOptions]="{standalone: true}">
+                      <option></option>
+                      <option *ngFor="let value of possibleSelect(selectedArr[i])">{{value}}</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="{{selectedArr.length == 1 ? 'col-xs-12': 'col-xs-6'}}" *ngIf="selectedArr.length !== tip_ypr.length">
+                      <button class="btn btn-success btn-block otstup_ot_knopki" (click)="btn_dobavlenie_dec()" >Добавить</button>
+                    </div>
+
+                    <div class="{{selectedArr.length === tip_ypr.length ? 'col-xs-12': 'col-xs-6'}}" *ngIf="selectedArr.length > 1">
+                      <button class="btn btn-success btn-block" (click)="btn_dobavlenie_inc(i)">Отменить</button>
+                    </div>
+
+                </div>
             </div>
-            <div class="col-xs-6">
-              <button class="btn btn-success btn-block">Отменить</button>
-            </div>
-          </div>
-          <br>
-          <div class="form-group">
-            <select class="form-control">
-              <option>Растяжка</option>
-              <option>Разминка</option>
-              <option>Силовое упражнение</option>
-            </select>
-          </div>
-          <div class="row">
-            <div class="col-xs-6">
-              <button class="btn btn-success btn-block otstup_ot_knopki">Добавить</button>
-            </div>
-            <div class="col-xs-6">
-              <button class="btn btn-success btn-block">Отменить</button>
-            </div>
-          </div>
+
         </div>
 
         <!--Конец типа упражнения-->

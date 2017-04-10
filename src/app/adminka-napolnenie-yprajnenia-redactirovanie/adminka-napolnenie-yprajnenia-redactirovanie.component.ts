@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminkaNapolnenieYprajneniaRedactirovanieComponent implements OnInit {
 
-    // public groupMuscles:string = '';
+    selected_vibor = 'Добавление упражнения';
+    public groupMuscles:string = '';
     // name_group_muscles:string = '';
-    // nameExercises:string = '';
-    
+    nameExercises:string = '';
+
     nameListGroupMuscles = [
         {
             'name_group_muscles' : 'Грудные',
@@ -36,10 +37,59 @@ export class AdminkaNapolnenieYprajneniaRedactirovanieComponent implements OnIni
             ]
         }
     ];
-    
-    // func()
 
+    clear_info():void{
+        // this.groupMuscles = '';
+        this.nameExercises ='';
+    }
 
+  //Работа с типом упражнений
+    tip_ypr:string[] = [
+        'Ростяжка',
+        'Разминка',
+        'Силовое упражнение'
+    ];
+    private selectedArr: string[] = [undefined];
+
+    btn_dobavlenie:number = this.tip_ypr.length;
+
+    btn_dobavlenie_dec():void{
+        if(this.tip_ypr.length > this.selectedArr.length){
+            // this.btn_dobavlenie--;
+            this.selectedArr.push(undefined);
+            console.log(this.btn_dobavlenie);
+        }
+    }
+    btn_dobavlenie_inc(iterator):void{
+        let newArr: string[] = [];
+        let i: number = 0;
+        for(let value of this.selectedArr){
+            if(i !== iterator){
+                newArr.push(value);
+            }
+            i++;
+        }
+        this.selectedArr = newArr;
+
+        this.btn_dobavlenie++;
+        console.log(this.btn_dobavlenie);
+    }
+
+    possibleSelect(itemFromSelect: string = ''): string[]{
+        let tip_ypr: string[] = [];
+
+        for(let value of this.tip_ypr){
+            if(itemFromSelect !== value){
+                if(this.selectedArr.indexOf(value) === -1){
+                    tip_ypr.push(value);
+                }
+            } else {
+                tip_ypr.push(value);
+            }
+        }
+        return tip_ypr;
+    }
+  //Конец работы с ТИПОМ УПРАЖЕНИЙ
 
   constructor() { }
 
